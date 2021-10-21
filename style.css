@@ -1,0 +1,531 @@
+@font-face {
+  font-family: poo;
+  src: local("Poppins-Medium"),
+    url("img/Poppins-Medium.ttf");
+}
+
+.menu,.close{
+	display: none
+}
+
+.circle_414{
+	display: none
+}
+	
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: poo;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	max-height: 100vh;
+	padding:100px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	}
+
+.thumb_2{
+	display: none
+}
+
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: transparent;
+}
+
+header .logo{
+	position: relative;
+	max-width: 80px;
+}
+
+header ul{
+	position: relative;
+
+display: flex;
+}
+
+header ul li{
+	list-style: none;
+}
+
+header ul li a{
+	display: inline-block;
+	color: #333;
+
+	font-weight: 400;
+	margin-left: 40px;
+
+	text-decoration: none;
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content .textBox{
+	position: relative;
+	max-width: 600px;
+}
+
+.content .textBox h2{
+	color: #333;
+	font-size: 4em;
+
+	line-height: 1.4em;
+
+	font-weight: 500;
+}
+
+.content .textBox h2 span{
+	color: #017143;
+	font-size: 1.2em;
+	font-weight: 900
+}
+
+.content .textBox p{
+	color: #333
+}
+
+.content .textBox a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+
+	background-color: #017143;
+	color: #fff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+.content .imgBox{
+	width: 600px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	margin-top: 50px;
+}
+
+.content .imgBox img{
+	max-width: 340px
+}
+
+
+.thumb{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translate(-50%);
+	display: flex;
+}
+
+.thumb li{
+	list-style: none;
+	display: inline-block;
+	margin:0 20px;
+
+	cursor: pointer;
+
+	transition: 0.5s
+}
+
+.thumb li:hover{
+	transform: translateY(-15px);
+}
+
+.thumb li img{
+	max-width: 60px
+}
+
+.sci{
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.sci li{
+	list-style: none;
+}
+
+.sci li a{
+	display: inline-block;
+	margin: 5px 0;
+	transform: scale(0.6);
+	filter: invert(1);
+}
+
+.circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: #017143;
+
+	clip-path: circle(600px at right 800px);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+
+	header ul{
+		transform: translate(-100px);
+	}
+
+	.sci{
+		transform: translate(-1200px,-70px);
+	}
+
+	.sci li a{
+		filter: invert(0);
+	}
+
+
+.thumb{
+	left: 50%;
+	bottom: 50px;
+	left: 450px
+}
+
+.thumb li img{
+	max-width: 50px;
+}
+
+.content .imgBox img {
+    max-width: 250px;
+    margin-right: 100px
+}
+
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+.content .textBox h2 {
+    color: #333;
+    font-size: 2.3em;
+    font-weight: 500;
+}
+
+.content .imgBox img {
+      transform: translate(150px);
+}
+
+	.sci{
+		transform: translate(-10px,-70px);
+	}
+
+	.sci li a{
+		filter: invert(1);
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+
+	.content .textBox h2{
+		font-size: 1.6em;
+		width: 300px;
+		padding-bottom: 10px
+	}
+
+	.circle{
+			left: 100px;
+			top: 50px
+		}
+
+		.textBox{
+			margin-top: 100px;
+			transform: translate(-30px);
+		}
+
+		.sci{
+			transform: translate(120px,-70px);
+		}
+
+		header ul{
+			transform: translate(130px);
+		}
+
+
+
+}
+
+
+@media screen and (max-width: 540px){
+	
+	.circle{
+		transform: scale(1.6);
+
+	clip-path: circle(300px at right bottom 10px);
+	}
+
+	.content .textBox h2{
+		font-size: 2em
+	}
+
+	.content .textBox p{
+		font-size: 1.2em;
+	}
+
+	header ul li a{
+		font-size: 1.3em
+	}
+
+
+	.content .textBox a{
+		background-color: #222
+	}
+
+	.thumb{
+		transform: translate(0,00px);
+	}
+
+
+
+	.sci{
+		transform: translate(-460px,350px);
+	}
+
+	.sci li a{
+		filter: invert(0);
+	}
+
+}
+
+@media screen and (max-width: 414px) {
+
+	.imgBox{
+		position: static;
+	}
+
+
+
+
+
+.circle{
+display: none;
+}
+
+.thumb{
+	display: none;
+}
+
+.content .textBox{
+	margin-top: 1700px
+}
+
+header ul{
+	display: block;
+
+	position: absolute;
+	top: 0;
+	/*left:400px;*/
+
+	left: -1000px;
+
+
+	background-color: white;
+
+	padding: 590px 150px;
+
+	z-index: 100;
+
+	transition: all 0.5s;
+}
+
+header ul li a{
+	font-size: 3em;
+		margin-bottom: 40px
+}
+
+.content .textBox h2{
+	font-size: 2.7em;
+
+	width: 600px
+}
+
+.content .textBox p{
+	font-size: 34px;
+
+	width: 1000px;
+}
+
+
+
+.thumb li img{
+	max-width: 100px;
+	transform: translate(-100px,200px);
+}
+
+
+.content .imgBox img{
+	transform: scale(1.3) translate(-200px);
+}
+
+header .logo{
+	transform: scale(2) translate(0,20px);
+}
+
+.content .textBox a{
+	font-size: 3em;
+	padding: 20px 43px;
+}
+
+.menu,.close{
+	display: block;
+
+	z-index: 1000;
+	filter: invert(1);
+
+	position: absolute;
+	top: 50px;
+	right: -550px;
+
+}
+
+.close{
+	display: none;
+}
+
+.thumb_2{
+	display: block;
+
+	list-style: none;
+
+
+	display: flex;
+
+	margin-top: 900px
+}
+
+.thumb_2 li{
+	margin-left: 30px;
+
+	transition: all 1s
+}
+
+.thumb_2 li:hover{
+	transform: translate(0,-50px);
+}
+
+.content .textBox h2 span{
+	color: orange
+}
+
+.sci{
+	transform: translate(-100px) scale(2);
+	margin-right: -700px;
+	margin-top: 100px
+}
+
+}
+
+@media screen and (max-width: 375px) {
+
+	.content .textBox{
+		margin-top: 2000px
+	}
+
+	.imgBox{
+		margin-bottom: -400px
+	}
+
+	.thumb_2{
+		margin-top: 1200px
+	}
+}
+
+@media screen and (max-width: 280px) {
+
+body{
+	overflow-x: hidden;
+}
+
+	.menu img{
+		transform: scale(1.3);
+	}
+
+	.close img{
+		transform: scale(1.3);
+	}
+
+	.menu,.close{
+		top: 90px;
+		left: 1000px
+	}
+
+	.content .textBox h2 {
+    font-size: 4em;
+}
+
+.content .textBox p {
+    font-size: 2.9em;
+}
+
+header ul li a {
+    font-size: 3.5em;
+}
+
+.content .textBox{
+	margin-top: 2900px
+}
+
+header ul {
+    padding: 800px 150px;
+}
+
+.thumb_2{
+	transform: scale(1.6);
+	margin-top: 1500px;
+	margin-left: 100px
+}
+
+.sci{
+	transform: scale(3);
+}
+
+.imgBox{
+	transform: scale(1.3);
+}
+
+}

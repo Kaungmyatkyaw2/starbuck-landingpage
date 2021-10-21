@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+	<title>Responsive starbuck site</title>
+</head>
+
+
+
+<body>
+
+
+	<section>
+
+		
+
+		<div class="circle"></div>
+		
+		
+		<header>
+			
+			<a href="#"><img src="img/logo.png" class="logo"></a>
+
+			<li class="menu" onclick="menu('menu','close','menubar','400px')"><img src="img/menu.png"></li>
+			<li class="close" onclick="menu('close','menu','menubar','-1000px')"><img src="img/close.png"></li>
+
+			<ul class="menubar">
+				
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+
+			</ul>
+
+		</header>
+
+
+		<div class="content">
+			
+			<div class="textBox">
+				
+				<h2>It's not just Coffee <br/>It's <span>Starbucks</span></h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				t, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="#">Learn More</a>
+
+			</div>
+
+
+
+		<div class="imgBox">
+			
+			<img src="img/img1.png" class="starbucks">
+
+		</div>
+
+
+				</div>
+
+
+
+				<ul class="thumb">
+					
+					<li><img src="img/thumb1.png" onclick="imgSlide('img/img1.png');ChaneColor('#017143')"></li>
+					<li><img src="img/thumb2.png" onclick="imgSlide('img/img2.png');ChaneColor('#eb7495')"></li>
+					<li><img src="img/thumb3.png" onclick="imgSlide('img/img3.png');ChaneColor('#d752b1')"></li>
+
+				</ul>
+
+				<ul class="sci">
+					
+					<li><a href="#"><img src="img/facebook.png"></a></li>
+					<li><a href="#"><img src="img/twitter.png"></a></li>
+					<li><a href="#"><img src="img/instagram.png"></a></li>
+
+				</ul>
+
+
+					<ul class="thumb_2">
+					
+					<li><img src="img/thumb1.png" onclick="imgSlide('img/img1.png');ChaneColortwo('#017143')"></li>
+					<li><img src="img/thumb2.png" onclick="imgSlide('img/img2.png');ChaneColortwo('#eb7495')"></li>
+					<li><img src="img/thumb3.png" onclick="imgSlide('img/img3.png');ChaneColortwo('#d752b1')"></li>
+
+				</ul>
+
+	</section>
+
+	<script type="text/javascript">
+		
+		function imgSlide(anything){
+			document.querySelector('.starbucks').src = anything;
+		}
+
+		function ChaneColor(color) {
+			const circle = document.querySelector('.circle');
+
+			circle.style.backgroundColor = color
+		}
+
+		function menu(hidden,blocks,hiddens,pixel) {
+			document.querySelector('.' + hidden).style.display = 'none';
+
+				document.querySelector('.' + blocks).style.display = 'block';
+
+					document.querySelector('.' + hiddens).style.left = pixel;
+		}
+
+
+
+
+				function ChaneColortwo(color) {
+			const circle = document.querySelector('body');
+
+			circle.style.backgroundColor = color;
+
+			const ul = document.querySelector('ul');
+
+			ul.style.backgroundColor = color;
+		}
+
+	</script>
+
+</body>
+</html>
